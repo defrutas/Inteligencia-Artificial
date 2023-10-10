@@ -26,22 +26,23 @@
 # coloring = color_map(map_graph)
 # print(coloring)
 
-def is_safe(graph, v, color, c):
-    for neighbor in graph[v]:
-        if neighbor == 1 and color[neighbor] == c:
+
+def is_safe(v, c, graph, color, num_colors):
+    for neighbor in range(len(graph)):
+        if graph[v][neighbor] == 1 and color[neighbor] == c:
             return False
     return True
 
 def graph_coloring(graph, num_colors):
     V = len(graph)
-    color = [-1] * V  # Initialize colors for all vertices
+    color = [-1] * V  # Initialize colors for all countries
 
     def solve(v):
         if v == V:
             return True
 
         for c in range(num_colors):
-            if is_safe(graph, v, color, c):
+            if is_safe(v, c, graph, color, num_colors):
                 color[v] = c
                 if solve(v + 1):
                     return True
@@ -52,15 +53,19 @@ def graph_coloring(graph, num_colors):
         return
     else:
         print("Solution exists:")
-        for c in color:
-            print(c, end=" ")
+        for v, c in enumerate(color):
+            print(f"Country {v} is colored with color {c}")
 
 # Example usage:
 graph = [
-    [0, 1, 1, 1],
-    [1, 0, 1, 0],
-    [1, 1, 0, 1],
-    [1, 0, 1, 0]
+[0, 1, 0, 0, 0, 0, 0, 0],
+[1, 0, 1, 0, 0, 1, 0, 1],
+[0, 1, 0, 1, 0, 1, 1, 1],
+[0, 0, 1, 0, 1, 1, 0, 0],
+[0, 0, 0, 1, 0, 1, 0, 0],
+[0, 1, 1, 1, 1, 0, 1, 0],
+[0, 0, 1, 0, 0, 1, 0, 1],
+[0, 1, 1, 0, 0, 0, 1, 0]
 ]
 num_colors = 4
 
