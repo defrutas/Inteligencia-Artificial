@@ -1,71 +1,67 @@
-from collections import deque
 import time
 
-def dfs(matrix):
-    rows, cols = len(matrix), len(matrix[0])
-    visited = [[False] * cols for _ in range(rows)]
-    start = None
-    end = None
+class DFSinMatrix:
+    def hasPathDfs(self, adj):
+        start_time = time.time()
+        
+        m = len(adj)
+        n = len(adj[0])
+        sx, sy, dx, dy = self.findSourceAndDest(adj, m, n)
+        visited = [[False for i in range(n)] for j in range(m)]
+        path = []  # Track the final path
+        self.dfs(adj, sx, sy, dx, dy, visited, path)
+        
+        end_time = time.time()
+        elapsed_time = end_time - start_time
+        
+        if not path:
+            return False, [], 0, elapsed_time
+        return True, path, len(path), elapsed_time
 
-    # Find the start and end positions
-    for i in range(rows):
-        for j in range(cols):
-            if matrix[i][j] == 2:
-                start = (i, j)
-            elif matrix[i][j] == 3:
-                end = (i, j)
+    def dfs(self, adj, i, j, dx, dy, visited, path):
+        m = len(adj)
+        n = len(adj[0])
+        if i < 0 or j < 0 or i > m - 1 or j > n - 1 or adj[i][j] == 1 or visited[i][j]:
+            return False
+        visited[i][j] = True
+        if i == dx and j == dy:  # Reached destination
+            path.append((i, j))
+            return True
+        
+        if (self.dfs(adj, i - 1, j, dx, dy, visited, path) or
+            self.dfs(adj, i + 1, j, dx, dy, visited, path) or
+            self.dfs(adj, i, j - 1, dx, dy, visited, path) or
+            self.dfs(adj, i, j + 1, dx, dy, visited, path)):
+            path.append((i, j))  # Add the current position to the path
+            return True
+        
+        return False
 
-    if start is None or end is None:
-        return None, 0, 0  # No path found, return time and steps as 0
+    def findSourceAndDest(self, adj, m, n):
+        for i in range(m):
+            for j in range(n):
+                if adj[i][j] == 2:
+                    sx, sy = i, j
+                elif adj[i][j] == 3:
+                    dx, dy = i, j
+        return sx, sy, dx, dy
 
-    stack = [(start[0], start[1], [])]
 
-    start_time = time.time()
-
-    while stack:
-        row, col, path = stack.pop()
-
-        if (row, col) == end:
-            end_time = time.time()
-            elapsed_time = end_time - start_time
-            return path + [(row, col)], elapsed_time, len(path) - 1  # Subtract 1 to exclude the starting position
-
-        if not visited[row][col]:
-            visited[row][col] = True
-
-            movements = [(1, 0), (-1, 0), (0, 1), (0, -1)]
-
-            for dr, dc in movements:
-                new_row, new_col = row + dr, col + dc
-
-                if (
-                    0 <= new_row < rows
-                    and 0 <= new_col < cols
-                    and not visited[new_row][new_col]
-                    and matrix[new_row][new_col] != 1
-                ):
-                    new_path = path + [(new_row, new_col)]  # Increment step count only when adding to path
-                    stack.append((new_row, new_col, new_path))
-                    matrix[new_row][new_col] = 4  # Mark as explored
-
-    return None, 0, 0  # No path found, return time and steps as 0
-
-# Loop through matrices
 with open('dfs.txt', 'w') as output_file:
-    for matrix_number in range(1, 6):  # Adjust the range based on the number of matrices
-        file_path = f'matrix_files/matrix_{matrix_number}.txt'
-
+    for matrix_num in range(1, 50):  # Change the range as needed
+        file_path = f'matrix_files/matrix_{matrix_num}.txt'
+        
         with open(file_path, 'r') as file:
             matrix = [list(map(int, line.strip().split())) for line in file]
 
-        # Main algorithm
-        path, elapsed_time, steps = dfs(matrix)
+        # find path
+        g = DFSinMatrix()
+        found, path, path_length, elapsed_time = g.hasPathDfs(matrix)
 
-        # Print metrics
-        output_file.write(f"\nMetrics for Matrix {matrix_number}:\n")
-        if path:
-            output_file.write(f"Final Path: {path}\n")
-            output_file.write(f"Elapsed Time: {elapsed_time:.4f} seconds\n")
-            output_file.write(f"Number of Steps: {steps}\n")
+        if found:
+            output_file.write(f"\nPath found in matrix {matrix_num} from robot to destination: \n")
+            output_file.write(','.join([f"({i},{j})" for i, j in reversed(path)]))
+            output_file.write(f"\nNumber of cells in the path: {path_length}\n")
+            output_file.write(f"Elapsed time: {elapsed_time:.6f} seconds\n")
         else:
-            output_file.write("No path found.\n")
+            output_file.write(f"\nNo path found in matrix {matrix_num} from robot to destination.\n")
