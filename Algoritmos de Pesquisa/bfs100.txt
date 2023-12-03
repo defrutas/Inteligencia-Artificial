@@ -1,0 +1,197 @@
+
+Metrics for Matrix 1:
+Elapsed Time: 0.0010006428 seconds
+Number of Steps: 21
+
+Metrics for Matrix 2:
+Elapsed Time: 0.0130119324 seconds
+Number of Steps: 120
+
+Metrics for Matrix 3:
+Elapsed Time: 0.0160143375 seconds
+Number of Steps: 105
+
+Metrics for Matrix 4:
+No path found.
+
+Metrics for Matrix 5:
+Elapsed Time: 0.0010008812 seconds
+Number of Steps: 24
+
+Metrics for Matrix 6:
+Elapsed Time: 0.0040037632 seconds
+Number of Steps: 48
+
+Metrics for Matrix 7:
+Elapsed Time: 0.0160143375 seconds
+Number of Steps: 121
+
+Metrics for Matrix 8:
+Elapsed Time: 0.0170154572 seconds
+Number of Steps: 99
+
+Metrics for Matrix 9:
+Elapsed Time: 0.0080072880 seconds
+Number of Steps: 73
+
+Metrics for Matrix 10:
+Elapsed Time: 0.0140128136 seconds
+Number of Steps: 105
+
+Metrics for Matrix 11:
+Elapsed Time: 0.0000000000 seconds
+Number of Steps: 17
+
+Metrics for Matrix 12:
+Elapsed Time: 0.0190172195 seconds
+Number of Steps: 151
+
+Metrics for Matrix 13:
+Elapsed Time: 0.0190172195 seconds
+Number of Steps: 130
+
+Metrics for Matrix 14:
+Elapsed Time: 0.0090072155 seconds
+Number of Steps: 64
+
+Metrics for Matrix 15:
+Elapsed Time: 0.0190179348 seconds
+Number of Steps: 123
+
+Metrics for Matrix 16:
+Elapsed Time: 0.0160143375 seconds
+Number of Steps: 110
+
+Metrics for Matrix 17:
+Elapsed Time: 0.0140120983 seconds
+Number of Steps: 87
+
+Metrics for Matrix 18:
+Elapsed Time: 0.0160145760 seconds
+Number of Steps: 123
+
+Metrics for Matrix 19:
+Elapsed Time: 0.0160143375 seconds
+Number of Steps: 118
+
+Metrics for Matrix 20:
+Elapsed Time: 0.0110101700 seconds
+Number of Steps: 87
+
+Metrics for Matrix 21:
+Elapsed Time: 0.0180165768 seconds
+Number of Steps: 128
+
+Metrics for Matrix 22:
+Elapsed Time: 0.0020020008 seconds
+Number of Steps: 33
+
+Metrics for Matrix 23:
+Elapsed Time: 0.0080070496 seconds
+Number of Steps: 62
+
+Metrics for Matrix 24:
+Elapsed Time: 0.0170152187 seconds
+Number of Steps: 100
+
+Metrics for Matrix 25:
+Elapsed Time: 0.0140128136 seconds
+Number of Steps: 111
+
+Metrics for Matrix 26:
+Elapsed Time: 0.0120112896 seconds
+Number of Steps: 110
+
+Metrics for Matrix 27:
+Elapsed Time: 0.0050046444 seconds
+Number of Steps: 44
+
+Metrics for Matrix 28:
+Elapsed Time: 0.0100102425 seconds
+Number of Steps: 61
+
+Metrics for Matrix 29:
+Elapsed Time: 0.0100092888 seconds
+Number of Steps: 94
+
+Metrics for Matrix 30:
+Elapsed Time: 0.0070064068 seconds
+Number of Steps: 84
+
+Metrics for Matrix 31:
+No path found.
+
+Metrics for Matrix 32:
+Elapsed Time: 0.0150136948 seconds
+Number of Steps: 124
+
+Metrics for Matrix 33:
+Elapsed Time: 0.0130116940 seconds
+Number of Steps: 108
+
+Metrics for Matrix 34:
+Elapsed Time: 0.0120110512 seconds
+Number of Steps: 115
+
+Metrics for Matrix 35:
+Elapsed Time: 0.0040037632 seconds
+Number of Steps: 43
+
+Metrics for Matrix 36:
+Elapsed Time: 0.0130116940 seconds
+Number of Steps: 87
+
+Metrics for Matrix 37:
+Elapsed Time: 0.0100092888 seconds
+Number of Steps: 81
+
+Metrics for Matrix 38:
+Elapsed Time: 0.0170156956 seconds
+Number of Steps: 138
+
+Metrics for Matrix 39:
+Elapsed Time: 0.0200181007 seconds
+Number of Steps: 162
+
+Metrics for Matrix 40:
+Elapsed Time: 0.0140128136 seconds
+Number of Steps: 72
+
+Metrics for Matrix 41:
+Elapsed Time: 0.0210199356 seconds
+Number of Steps: 159
+
+Metrics for Matrix 42:
+Elapsed Time: 0.0130116940 seconds
+Number of Steps: 95
+
+Metrics for Matrix 43:
+Elapsed Time: 0.0070061684 seconds
+Number of Steps: 73
+
+Metrics for Matrix 44:
+Elapsed Time: 0.0120098591 seconds
+Number of Steps: 77
+
+Metrics for Matrix 45:
+Elapsed Time: 0.0160150528 seconds
+Number of Steps: 115
+
+Metrics for Matrix 46:
+Elapsed Time: 0.0020012856 seconds
+Number of Steps: 34
+
+Metrics for Matrix 47:
+No path found.
+
+Metrics for Matrix 48:
+Elapsed Time: 0.0010011196 seconds
+Number of Steps: 23
+
+Metrics for Matrix 49:
+Elapsed Time: 0.0140130520 seconds
+Number of Steps: 80
+
+Average Metrics for All Matrices:
+Average Elapsed Time: 0.0109487358 seconds
+Average Number of Steps: 84.46938775510205

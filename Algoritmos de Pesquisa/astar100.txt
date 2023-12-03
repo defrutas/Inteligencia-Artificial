@@ -1,0 +1,194 @@
+Matrix 1:
+Time taken: 0.002001523971557617 seconds
+Number of steps in the shortest path: 21
+
+Matrix 2:
+Time taken: 0.015013456344604492 seconds
+Number of steps in the shortest path: 120
+
+Matrix 3:
+Time taken: 0.015014171600341797 seconds
+Number of steps in the shortest path: 105
+
+No path found for Matrix 4
+
+Matrix 5:
+Time taken: 0.003002166748046875 seconds
+Number of steps in the shortest path: 24
+
+Matrix 6:
+Time taken: 0.002001523971557617 seconds
+Number of steps in the shortest path: 48
+
+Matrix 7:
+Time taken: 0.013013124465942383 seconds
+Number of steps in the shortest path: 121
+
+Matrix 8:
+Time taken: 0.009007692337036133 seconds
+Number of steps in the shortest path: 99
+
+Matrix 9:
+Time taken: 0.0050046443939208984 seconds
+Number of steps in the shortest path: 73
+
+Matrix 10:
+Time taken: 0.004004001617431641 seconds
+Number of steps in the shortest path: 105
+
+Matrix 11:
+Time taken: 0.001001119613647461 seconds
+Number of steps in the shortest path: 17
+
+Matrix 12:
+Time taken: 0.005005598068237305 seconds
+Number of steps in the shortest path: 151
+
+Matrix 13:
+Time taken: 0.009008646011352539 seconds
+Number of steps in the shortest path: 130
+
+Matrix 14:
+Time taken: 0.0050048828125 seconds
+Number of steps in the shortest path: 64
+
+Matrix 15:
+Time taken: 0.013012170791625977 seconds
+Number of steps in the shortest path: 123
+
+Matrix 16:
+Time taken: 0.015012979507446289 seconds
+Number of steps in the shortest path: 110
+
+Matrix 17:
+Time taken: 0.0030024051666259766 seconds
+Number of steps in the shortest path: 87
+
+Matrix 18:
+Time taken: 0.013012170791625977 seconds
+Number of steps in the shortest path: 123
+
+Matrix 19:
+Time taken: 0.008007526397705078 seconds
+Number of steps in the shortest path: 118
+
+Matrix 20:
+Time taken: 0.006005525588989258 seconds
+Number of steps in the shortest path: 87
+
+Matrix 21:
+Time taken: 0.010009288787841797 seconds
+Number of steps in the shortest path: 128
+
+Matrix 22:
+Time taken: 0.0020020008087158203 seconds
+Number of steps in the shortest path: 33
+
+Matrix 23:
+Time taken: 0.007006406784057617 seconds
+Number of steps in the shortest path: 62
+
+Matrix 24:
+Time taken: 0.010008573532104492 seconds
+Number of steps in the shortest path: 100
+
+Matrix 25:
+Time taken: 0.009007930755615234 seconds
+Number of steps in the shortest path: 111
+
+Matrix 26:
+Time taken: 0.0040035247802734375 seconds
+Number of steps in the shortest path: 110
+
+Matrix 27:
+Time taken: 0.004004001617431641 seconds
+Number of steps in the shortest path: 44
+
+Matrix 28:
+Time taken: 0.004003047943115234 seconds
+Number of steps in the shortest path: 61
+
+Matrix 29:
+Time taken: 0.010010004043579102 seconds
+Number of steps in the shortest path: 94
+
+Matrix 30:
+Time taken: 0.0070056915283203125 seconds
+Number of steps in the shortest path: 84
+
+No path found for Matrix 31
+
+Matrix 32:
+Time taken: 0.012010335922241211 seconds
+Number of steps in the shortest path: 124
+
+Matrix 33:
+Time taken: 0.010009050369262695 seconds
+Number of steps in the shortest path: 108
+
+Matrix 34:
+Time taken: 0.0070078372955322266 seconds
+Number of steps in the shortest path: 115
+
+Matrix 35:
+Time taken: 0.0030083656311035156 seconds
+Number of steps in the shortest path: 43
+
+Matrix 36:
+Time taken: 0.008006572723388672 seconds
+Number of steps in the shortest path: 87
+
+Matrix 37:
+Time taken: 0.005005359649658203 seconds
+Number of steps in the shortest path: 81
+
+Matrix 38:
+Time taken: 0.01701521873474121 seconds
+Number of steps in the shortest path: 138
+
+Matrix 39:
+Time taken: 0.04103732109069824 seconds
+Number of steps in the shortest path: 162
+
+Matrix 40:
+Time taken: 0.0040035247802734375 seconds
+Number of steps in the shortest path: 72
+
+Matrix 41:
+Time taken: 0.01901721954345703 seconds
+Number of steps in the shortest path: 159
+
+Matrix 42:
+Time taken: 0.013011693954467773 seconds
+Number of steps in the shortest path: 95
+
+Matrix 43:
+Time taken: 0.007006645202636719 seconds
+Number of steps in the shortest path: 73
+
+Matrix 44:
+Time taken: 0.008007049560546875 seconds
+Number of steps in the shortest path: 77
+
+Matrix 45:
+Time taken: 0.01301121711730957 seconds
+Number of steps in the shortest path: 115
+
+Matrix 46:
+Time taken: 0.0020020008087158203 seconds
+Number of steps in the shortest path: 34
+
+No path found for Matrix 47
+
+Matrix 48:
+Time taken: 0.0020020008087158203 seconds
+Number of steps in the shortest path: 23
+
+Matrix 49:
+Time taken: 0.01201009750366211 seconds
+Number of steps in the shortest path: 80
+
+
+Average Metrics for All Matrices:
+Average Time Taken: 0.008089128805666554 seconds
+Average Number of Steps in the Shortest Path: 84.46938775510205

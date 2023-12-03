@@ -2,7 +2,7 @@ import random
 import os
 
 # Define the dimensions of the matrix
-rows, cols = 50, 50
+rows, cols = 500, 500
 
 # Define the number of matrices you want to generate
 num_matrices = 50
@@ -11,15 +11,15 @@ num_matrices = 50
 obstacle_probability = 0.3  # Adjust this value as needed (e.g., 0.2 for 20% obstacles)
 
 # Create a directory to store the matrix files
-if not os.path.exists("matrix_files"):
-    os.mkdir("matrix_files")
+if not os.path.exists("matrix_files500x500"):
+    os.mkdir("matrix_files500x500")
 
 for matrix_num in range(1, num_matrices + 1):
     matrix = [[0 for _ in range(cols)] for _ in range(rows)]
 
     # Generate random positions for the numbers 2 and 3
-    position_2 = (random.randint(0, 49), random.randint(0, 49))
-    position_3 = (random.randint(0, 49), random.randint(0, 49))
+    position_2 = (random.randint(0, 499), random.randint(0, 499))
+    position_3 = (random.randint(0, 499), random.randint(0, 499))
 
     # Fill the matrix with 1s, 2, and 3 with adjusted obstacle probability
     for i in range(rows):
@@ -37,7 +37,7 @@ for matrix_num in range(1, num_matrices + 1):
     # os.mkdir(folder_name)
 
     # Write the matrix to a text file in the folder
-    file_path = os.path.join("matrix_files", f"matrix_{matrix_num}.txt")
+    file_path = os.path.join("matrix_files500x500", f"matrix_{matrix_num}.txt")
     with open(file_path, 'w') as file:
         for row in matrix:
             file.write(' '.join(map(str, row)) + '\n')

@@ -80,6 +80,9 @@ def get_neighbors(node, rows, cols):
 
 # Example usage:
 with open('astar.txt', 'w') as output_file:
+    total_time_taken = 0
+    total_num_steps = 0
+
     for matrix_number in range(1, 50):  # Adjust the range based on the number of matrices
         file_path = f'matrix_files/matrix_{matrix_number}.txt'
         with open(file_path, 'r') as file:
@@ -88,10 +91,23 @@ with open('astar.txt', 'w') as output_file:
         path, time_taken, num_steps = astar(matrix)
 
         if path:
+            total_time_taken += time_taken
+            total_num_steps += num_steps
             output_file.write(f"Matrix {matrix_number}:\n")
-            output_file.write(f"Shortest path: {path}\n")
             output_file.write(f"Time taken: {time_taken} seconds\n")
             output_file.write(f"Number of steps in the shortest path: {num_steps}\n")
             output_file.write("\n")
         else:
             output_file.write(f"No path found for Matrix {matrix_number}\n\n")
+
+    # Calculate averages
+    if total_time_taken > 0:
+        average_time_taken = total_time_taken / 49  # Adjust the denominator based on the actual number of matrices
+        average_num_steps = total_num_steps / 49  # Adjust the denominator based on the actual number of matrices
+
+        # Print average metrics
+        output_file.write("\nAverage Metrics for All Matrices:")
+        output_file.write(f"\nAverage Time Taken: {average_time_taken} seconds")
+        output_file.write(f"\nAverage Number of Steps in the Shortest Path: {average_num_steps}\n")
+    else:
+        output_file.write("\nNo matrices found.\n")

@@ -1,0 +1,190 @@
+
+Path found in matrix 1 from robot to destination:
+Number of cells in the path: 5865
+Elapsed time: 0.018016 seconds
+
+Path found in matrix 2 from robot to destination:
+Number of cells in the path: 2764
+Elapsed time: 0.012011 seconds
+
+Path found in matrix 3 from robot to destination:
+Number of cells in the path: 5380
+Elapsed time: 0.014013 seconds
+
+No path found in matrix 4 from robot to destination.
+
+Path found in matrix 5 from robot to destination:
+Number of cells in the path: 51
+Elapsed time: 0.003004 seconds
+
+Path found in matrix 6 from robot to destination:
+Number of cells in the path: 6587
+Elapsed time: 0.017015 seconds
+
+Path found in matrix 7 from robot to destination:
+Number of cells in the path: 586
+Elapsed time: 0.003004 seconds
+
+Path found in matrix 8 from robot to destination:
+Number of cells in the path: 4724
+Elapsed time: 0.014014 seconds
+
+Path found in matrix 9 from robot to destination:
+Number of cells in the path: 3042
+Elapsed time: 0.011010 seconds
+
+Path found in matrix 10 from robot to destination:
+Number of cells in the path: 2882
+Elapsed time: 0.016016 seconds
+
+Path found in matrix 11 from robot to destination:
+Number of cells in the path: 39
+Elapsed time: 0.003003 seconds
+
+Path found in matrix 12 from robot to destination:
+Number of cells in the path: 372
+Elapsed time: 0.002002 seconds
+
+Path found in matrix 13 from robot to destination:
+Number of cells in the path: 449
+Elapsed time: 0.004004 seconds
+
+Path found in matrix 14 from robot to destination:
+Number of cells in the path: 5784
+Elapsed time: 0.014012 seconds
+
+Path found in matrix 15 from robot to destination:
+Number of cells in the path: 2422
+Elapsed time: 0.006005 seconds
+
+Path found in matrix 16 from robot to destination:
+Number of cells in the path: 195
+Elapsed time: 0.003002 seconds
+
+Path found in matrix 17 from robot to destination:
+Number of cells in the path: 6180
+Elapsed time: 0.019017 seconds
+
+Path found in matrix 18 from robot to destination:
+Number of cells in the path: 6365
+Elapsed time: 0.019017 seconds
+
+Path found in matrix 19 from robot to destination:
+Number of cells in the path: 5622
+Elapsed time: 0.016014 seconds
+
+Path found in matrix 20 from robot to destination:
+Number of cells in the path: 4887
+Elapsed time: 0.013011 seconds
+
+Path found in matrix 21 from robot to destination:
+Number of cells in the path: 5140
+Elapsed time: 0.015013 seconds
+
+Path found in matrix 22 from robot to destination:
+Number of cells in the path: 3844
+Elapsed time: 0.009009 seconds
+
+Path found in matrix 23 from robot to destination:
+Number of cells in the path: 3106
+Elapsed time: 0.009009 seconds
+
+Path found in matrix 24 from robot to destination:
+Number of cells in the path: 5066
+Elapsed time: 0.016016 seconds
+
+Path found in matrix 25 from robot to destination:
+Number of cells in the path: 6263
+Elapsed time: 0.019017 seconds
+
+Path found in matrix 26 from robot to destination:
+Number of cells in the path: 4110
+Elapsed time: 0.009007 seconds
+
+Path found in matrix 27 from robot to destination:
+Number of cells in the path: 1696
+Elapsed time: 0.005004 seconds
+
+Path found in matrix 28 from robot to destination:
+Number of cells in the path: 1972
+Elapsed time: 0.006005 seconds
+
+Path found in matrix 29 from robot to destination:
+Number of cells in the path: 5477
+Elapsed time: 0.012010 seconds
+
+Path found in matrix 30 from robot to destination:
+Number of cells in the path: 2228
+Elapsed time: 0.008007 seconds
+
+No path found in matrix 31 from robot to destination.
+
+Path found in matrix 32 from robot to destination:
+Number of cells in the path: 4992
+Elapsed time: 0.012011 seconds
+
+Path found in matrix 33 from robot to destination:
+Number of cells in the path: 2111
+Elapsed time: 0.008007 seconds
+
+Path found in matrix 34 from robot to destination:
+Number of cells in the path: 5476
+Elapsed time: 0.013012 seconds
+
+Path found in matrix 35 from robot to destination:
+Number of cells in the path: 1335
+Elapsed time: 0.005004 seconds
+
+Path found in matrix 36 from robot to destination:
+Number of cells in the path: 4663
+Elapsed time: 0.010009 seconds
+
+Path found in matrix 37 from robot to destination:
+Number of cells in the path: 3658
+Elapsed time: 0.009008 seconds
+
+Path found in matrix 38 from robot to destination:
+Number of cells in the path: 1544
+Elapsed time: 0.005004 seconds
+
+Path found in matrix 39 from robot to destination:
+Number of cells in the path: 2536
+Elapsed time: 0.006005 seconds
+
+Path found in matrix 40 from robot to destination:
+Number of cells in the path: 695
+Elapsed time: 0.003003 seconds
+
+Path found in matrix 41 from robot to destination:
+Number of cells in the path: 5553
+Elapsed time: 0.013521 seconds
+
+Path found in matrix 42 from robot to destination:
+Number of cells in the path: 250
+Elapsed time: 0.004004 seconds
+
+Path found in matrix 43 from robot to destination:
+Number of cells in the path: 3285
+Elapsed time: 0.012010 seconds
+
+Path found in matrix 44 from robot to destination:
+Number of cells in the path: 2694
+Elapsed time: 0.007006 seconds
+
+Path found in matrix 45 from robot to destination:
+Number of cells in the path: 2634
+Elapsed time: 0.007007 seconds
+
+Path found in matrix 46 from robot to destination:
+Number of cells in the path: 3578
+Elapsed time: 0.009008 seconds
+
+No path found in matrix 47 from robot to destination.
+
+Path found in matrix 48 from robot to destination:
+Number of cells in the path: 92
+Elapsed time: 0.003003 seconds
+
+Path found in matrix 49 from robot to destination:
+Number of cells in the path: 3677
+Elapsed time: 0.012011 seconds

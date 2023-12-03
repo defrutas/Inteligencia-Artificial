@@ -51,7 +51,10 @@ def bfs(matrix):
     return None, 0, 0  # No path found, return time and steps as 0
 
 # Open the bfs.txt file in append mode
-with open('bfs.txt', 'a') as bfs_file:
+with open('bfs.txt', 'w') as bfs_file:
+    total_elapsed_time = 0
+    total_steps = 0
+
     # Loop through matrices
     for matrix_number in range(1, 50):  # Adjust the range based on the number of matrices
         file_path = f'matrix_files/matrix_{matrix_number}.txt'
@@ -68,8 +71,21 @@ with open('bfs.txt', 'a') as bfs_file:
         # Print metrics
         print(f"\nMetrics for Matrix {matrix_number}:", file=bfs_file)
         if path:
-            print("Final Path:", path, file=bfs_file)
-            print(f"Elapsed Time: {elapsed_time:.4f} seconds", file=bfs_file)
+            print(f"Elapsed Time: {elapsed_time:.10f} seconds", file=bfs_file)
             print("Number of Steps:", steps, file=bfs_file)
+            total_elapsed_time += elapsed_time
+            total_steps += steps
         else:
             print("No path found.", file=bfs_file)
+
+    # Calculate averages
+    if total_elapsed_time > 0:
+        average_elapsed_time = total_elapsed_time / 49  # Adjust the denominator based on the actual number of matrices
+        average_steps = total_steps / 49  # Adjust the denominator based on the actual number of matrices
+
+        # Print average metrics
+        print("\nAverage Metrics for All Matrices:", file=bfs_file)
+        print(f"Average Elapsed Time: {average_elapsed_time:.10f} seconds", file=bfs_file)
+        print("Average Number of Steps:", average_steps, file=bfs_file)
+    else:
+        print("\nNo matrices found.", file=bfs_file)
