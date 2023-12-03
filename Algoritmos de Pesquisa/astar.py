@@ -1,29 +1,10 @@
 import heapq
+import time
 
-class Node:
-    def __init__(self, parent=None, position=None):
-        self.parent = parent
-        self.position = position
-        self.g = 0
-        self.h = 0
-        self.f = 0
-
-    def __eq__(self, other):
-        return self.position == other.position
-
-    def __lt__(self, other):
-        return self.f < other.f
-
-def heuristic(start, goal):
-    # Manhattan distance
-    return abs(start[0] - goal[0]) + abs(start[1] - goal[1])
-
-def astar(matrix):
+def find_start_end(matrix):
     rows, cols = len(matrix), len(matrix[0])
-    start = None
-    end = None
+    start, end = None, None
 
-    # Find the start and end positions
     for i in range(rows):
         for j in range(cols):
             if matrix[i][j] == 2:
@@ -31,70 +12,86 @@ def astar(matrix):
             elif matrix[i][j] == 3:
                 end = (i, j)
 
-    if start is None or end is None:
-        return None
+    return start, end
 
-    priority_queue = [(0, start, [], 0)]  # Add the cost parameter to the priority queue
-    heapq.heapify(priority_queue)
+def astar(matrix):
+    start_time = time.time()
 
-    visited = set()
+    start, end = find_start_end(matrix)
+    
+    if not start or not end:
+        return None, None, None  # Start or end not found in the matrix
 
-    while priority_queue:
-        _, current, path, cost = heapq.heappop(priority_queue)
+    rows, cols = len(matrix), len(matrix[0])
+    open_set = []
+    heapq.heappush(open_set, (0, start))
+    came_from = {start: None}
+    g_score = {start: 0}
 
-        matrix[current[0]][current[1]] = 'x'  # Mark as explored
+    while open_set:
+        current_cost, current_node = heapq.heappop(open_set)
 
-        if current == end:
-            print_path(matrix, path)
-            return path + [current], cost  # Return the path and the total cost
+        if current_node == end:
+            path = reconstruct_path(came_from, end)
+            end_time = time.time()
+            return path, end_time - start_time, len(path) - 1  # Return path, time taken, and number of steps
 
-        if current not in visited:
-            visited.add(current)
+        for neighbor in get_neighbors(current_node, rows, cols):
+            tentative_g_score = g_score[current_node] + 2 if is_turn(current_node, neighbor) else g_score[current_node] + 1
 
-            movements = [(1, 0), (-1, 0), (0, 1), (0, -1)]
+            if matrix[neighbor[0]][neighbor[1]] == 1:  # Skip obstacles
+                continue
 
-            for dr, dc in movements:
-                new_row, new_col = current[0] + dr, current[1] + dc
+            if neighbor not in g_score or tentative_g_score < g_score[neighbor]:
+                g_score[neighbor] = tentative_g_score
+                f_score = tentative_g_score + heuristic(neighbor, end)
+                heapq.heappush(open_set, (f_score, neighbor))
+                came_from[neighbor] = current_node
 
-                if (
-                    0 <= new_row < rows
-                    and 0 <= new_col < cols
-                    and matrix[new_row][new_col] != 1
-                ):
-                    new_path = path + [current]
-                    new_cost = cost + 1  # Base cost for moving straight
+    return None, None, None  # No path found
 
-                    # Update the Node class instantiation
-                    neighbor = Node(parent=current, position=(new_row, new_col))
-                    neighbor.g = new_cost
-                    neighbor.h = heuristic((new_row, new_col), end)
-                    neighbor.f = neighbor.g + neighbor.h
+def is_turn(current, neighbor):
+    return current[0] != neighbor[0] and current[1] != neighbor[1]
 
-                    if neighbor.position not in visited:
-                        visited.add(neighbor.position)
-                        matrix[new_row][new_col] = 'x'  # Mark as explored
-                        heapq.heappush(priority_queue, (neighbor.f, neighbor.position, new_path, new_cost))
+def reconstruct_path(came_from, current):
+    path = [current]
+    while current in came_from and came_from[current] is not None:
+        current = came_from[current]
+        path.append(current)
+    return path[::-1]
 
-            print_matrix(matrix)
+def heuristic(a, b):
+    return abs(a[0] - b[0]) + abs(a[1] - b[1])
 
-    return None, 0  # Return None and 0 if no path is found
+def get_neighbors(node, rows, cols):
+    i, j = node
+    neighbors = []
 
-def print_matrix(matrix):
-    for row in matrix:
-        print(' '.join(map(str, row)))
-    print()
+    if i > 0:
+        neighbors.append((i - 1, j))
+    if i < rows - 1:
+        neighbors.append((i + 1, j))
+    if j > 0:
+        neighbors.append((i, j - 1))
+    if j < cols - 1:
+        neighbors.append((i, j + 1))
 
-def print_path(matrix, path):
-    for row, col in path:
-        matrix[row][col] = '*'
-    print_matrix(matrix)
+    return neighbors
 
-# Load the matrix from a file
-file_path = 'matrix_files/matrix_1.txt'
-with open(file_path, 'r') as file:
-    matrix = [list(map(int, line.strip().split())) for line in file]
+# Example usage:
+with open('astar.txt', 'w') as output_file:
+    for matrix_number in range(1, 50):  # Adjust the range based on the number of matrices
+        file_path = f'matrix_files/matrix_{matrix_number}.txt'
+        with open(file_path, 'r') as file:
+            matrix = [list(map(int, line.strip().split())) for line in file]
 
-# Get the number of rows and columns
-rows, cols = len(matrix), len(matrix[0])
+        path, time_taken, num_steps = astar(matrix)
 
-path, total_cost = astar(matrix)
+        if path:
+            output_file.write(f"Matrix {matrix_number}:\n")
+            output_file.write(f"Shortest path: {path}\n")
+            output_file.write(f"Time taken: {time_taken} seconds\n")
+            output_file.write(f"Number of steps in the shortest path: {num_steps}\n")
+            output_file.write("\n")
+        else:
+            output_file.write(f"No path found for Matrix {matrix_number}\n\n")
