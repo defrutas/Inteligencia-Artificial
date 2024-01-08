@@ -10,7 +10,8 @@ from sklearn.preprocessing import StandardScaler
 df = pd.read_excel('data.xlsx')
 
 # Assuming 'Abandono' is the target variable
-features = df.drop(['Abandono', 'cd_curso', ''], axis=1)
+selected_columns = ['maiores 23', 'Abandono']
+features = df[selected_columns].drop('Abandono', axis=1)
 target = df['Abandono']
 
 # Split the data into training and testing sets
