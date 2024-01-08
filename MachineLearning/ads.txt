@@ -1,0 +1,3 @@
+pip install pandas
+pip install scikit-learn
+	cd_instituic	cd_curso	sexo	ord_ingresso	cd_tip_est_sec	cd_hab_ant	cd_regime	idadeReal	trabalhadorEstudante	cd_inst_hab_ant	estado_civil	cd_cur_hab_ant	Ensino Basico Mae	Ensino Basico Pai	Ensino Secundário Mae	Ensino Secundário Pai	Ensino Superior Mae	Ensino Superior Pai	Ensino Outros Mae	Ensino Outros Pai	pais trabalham	Portugues	CNA	internacional	maiores 23	outros	1geracao	nota10-12	nota12-14	nota14-16	nota16-18	nota18-20	Abandono
