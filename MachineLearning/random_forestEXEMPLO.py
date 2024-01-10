@@ -16,7 +16,6 @@ import graphviz
 # Matrix visualisation
 import matplotlib.pyplot as plt
 
-
 # Load your dataset (replace 'your_data.csv' with the actual filename)
 df = pd.read_excel('data.xlsx')
 
@@ -65,7 +64,7 @@ rf = RandomForestClassifier()
 rand_search = RandomizedSearchCV(rf, 
                                  param_distributions = param_dist, 
                                  n_iter=5, 
-                                 cv=5)
+                                 cv=10)
 
 # Fit the random search object to the data
 rand_search.fit(X_train, y_train)
@@ -102,4 +101,13 @@ feature_importances.plot.bar()
 plt.savefig('feature_importances.png')
 
 # Show the plot
-plt.show()
+#plt.show()
+
+# Evaluate the model's performance
+accuracy = accuracy_score(y_test, y_pred)
+precision = precision_score(y_test, y_pred)
+recall = recall_score(y_test, y_pred)
+
+print(f"Accuracy: {accuracy:.4f}")
+print(f"Precision: {precision:.4f}")
+print(f"Recall: {recall:.4f}")
